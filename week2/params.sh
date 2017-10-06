@@ -1,15 +1,15 @@
 #!/bin/bash
-correct='N'
+correct="N"
 
-while [ $correct != 'Y' ];
+while [[ "$correct" == "N" ]];
 do 
 	echo "Please enter your name"
-	read $name
+	read name
 	echo "Where do you live?"
-	read $place
+	read place
 	echo "How old are you?"
-	read $age
+	read age
 	echo "You are $name, living in $place, and $age years of age"
 	echo "is this correct?"
-	read $correct
+	read correct
 done
