@@ -5,12 +5,14 @@
 
 # invoke the load test with appropriate parameters
 ## Add a for loop for the load test - incrementing
-./loadtest $1 &
-
-# sleep for the dration of the load test T
-sleep $2
-
-# kill the load test process
+for i in {1..50}
+do
+#	./loadtest $1 &
+./loadtest $i &
+	# sleep for the dration of the load test T
+#	sleep  $2
+sleep 10
+	# kill the load test process
 pkill loadtest
-
+done
 

@@ -1,0 +1,3 @@
+mpstat -o JSON | jq ''
+mpstat -o JSON | jq '.sysstat.hosts[0].statistics[0].timestamp'
+mpstat 10 1 -o JSON | jq '.sysstat.hosts[0].statistics[0].cpu-load[0].idle'
