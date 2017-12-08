@@ -1,0 +1,5 @@
+docker build -t firstcontainer .
+docker images
+docker run -p 4000:80 firstcontainer
+docker build -t checklib64 .
+docker run -p 4000:80 firstcontainer
